@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UpQode Test Page</title>
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="resourses/header/header.css" rel="stylesheet" type="text/css">
+    <link href="resourses/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script src="bootstrap/js/jquery-3.2.1.min%20(1).js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="resourses/js/viewportchecker.js" type="text/javascript"></script>
+    <script src="resourses/js/myjs.js" type="text/javascript"></script>
+    <link href="resourses/header/fonts/lato/Lato/latofonts.css" rel="stylesheet" type="text/css">
+    <link href="resourses/header/fonts/lato/Lato/latostyle.css" rel="stylesheet" type="text/css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#menu1").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+
+        });
+
+    });
+
+</script>
+
+
+
+<!--Хедер страници-->
+<section id="home">
+<div class="navbar navbar-default navbar-fixed-top margin-bottom " style="background-color: white">
+    <div class="container">
+        <div class="navbar-header logo-padding">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo-font" href="#">
+                <span class="logo-up">UP</span><span class="logo-qode">QUOD</span></a>
+
+         </div>
+
+        <div class="navbar-collapse collapse">
+            <div class="container">
+
+                <div class="container " id="menu1">
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li><a href="#home">Home</a></li>
+
+                        <li class="dropdown dropdown-main">
+                            <a href="#why" class="dropdown-toggle" data-toggle="dropdown dropdown-main">Products <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-main">
+                                <li><a href="#">Name Surname</a></li>
+                                <li><a href="#">Name Surnam</a></li>
+                                <li class="dropdown dropdown-submenu dropdown-main dropdown-submenu-main">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown-main">Nelson Noa Chris</a>
+                                    <ul class="dropdown-menu dropdown-menu-main">
+                                        <li><a href="#">Name Surnam</a></li>
+                                        <li ><a href="#">Name Surnam</a></li>
+                                        <li class="dropdown dropdown-submenu dropdown-main dropdown-submenu-main">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nelson Noa Christ</a>
+                                            <ul class="dropdown-menu dropdown-menu-main">
+                                                <li><a href="#"><i class="icon-chevron-right icon-white"></i>Name Surnam</a></li>
+                                                <li><a href="#"><i class="icon-chevron-right"></i>Name Surnam</a></li>
+                                                <li><a href="#"><i class="icon-chevron-right"></i>Name Surnam</a></li>
+                                                <li><a href="#"><i class="icon-chevron-right"></i>Name Surnam</a></li>
+                                            </ul>
+                                        <li><a href="#">Name Surnam</a></li>
+                                        <li><a href="#">Name Surnam</a></li>
+                                        <li><a href="#">Nelson Noa</a></li>
+                                    </ul>
+                                <li><a href="#">Name Surnam</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about-us-section">About</a></li>
+                        <li><a href="#contacts">Contact</a></li>
+                        <li><a><input type="text" class="form-left" id="search_input"></a></li>
+                    </ul>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<div class="separator"></div>
+<!--Хєдер старници -->
+
+
+<!--Карусель с банерами-->
+<div id="testCarousel" class="carousel slide" data-ride="carousel" data-warp="true">
+
+    <!-- Индикаторы карусели -->
+    <ol class="carousel-indicators">
+        <!-- Перейти к слайду №0 с помощью соответствующего атрибута с индексом data-slide-to="0" -->
+        <li data-target="#testCarousel" data-slide-to="0"  class="active"></li>
+        <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="1" -->
+        <li data-target="#testCarousel" data-slide-to="1"></li>
+        <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="2" -->
+        <li data-target="#testCarousel" data-slide-to="2"></li>
+    </ol>
+
+<div id="#testCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <!-- Слайды карусели -->
+    <div class="carousel-inner " style="margin-top: 0">
+        <!-- Слайд 1 -->
+        <div class="item active item1">
+            <img src="resourses/header/images/baner.png" style="width: 100%" class="grad-background">
+            <div class="carousel-caption banner-font baner-text-position">
+                <h2><span class="baner-font-first">CREATIVE</span><span class="baner-font-second"> DESING AGEMMCY</span>  </h2>
+                <p><span class="banner-font">
+                   Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                    Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor
+                </span> </p>
+            </div>
+
+        </div>
+        <!-- Слайд 2 -->
+        <div class="item ">
+            <img src="resourses/header/images/cat.png" style="width: 100%"  class="grad-background" >
+            <div class="carousel-caption banner-font baner-text-position">
+                <h2><span class="baner-font-first">CAT</span><span class="baner-font-second">  IS WONDERFUL</span>  </h2>
+                <p><span class="banner-font">Этот кот принесет вам удачу если будете хорошо просить</span></p>
+            </div>
+        </div>
+        <!-- Слайд 3 -->
+        <div class="item" >
+            <img src="resourses/header/images/future.png" style="width: 100%; height: 100%" class="grad-background">
+            <div class="carousel-caption banner-font baner-text-position">
+                <h2><span class="baner-font-first">Future</span><span class="baner-font-second"> BEYOND </span>  </h2>
+                <p><span class="banner-font">Путешествие в будущее но не надолго</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Навигация карусели (следующий или предыдущий слайд) -->
+    <!-- Кнопка, переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+    <a class="left carousel-control" href="#testCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <!-- Кнопка, переход на следующий слайд с помощью атрибута data-slide="next" -->
+    <a class="right carousel-control" href="#testCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+</div>
+<script type="text/javascript">
+    $('.carousel').each(function(){
+        $(this).carousel({
+            interval: Math.random()*(1000-4000)+4000
+        });
+    });
+</script>
+<!--Конец кусели-->
+
+
+
+<!--Why us chose us-->
+<section id="why">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 get-touch why">
+                <p>WHY<span class="touch-color"> CHOUS US</span> </p>
+                <div class="container text-wight">
+                    <h6><span id="text-why">Quisque fermentum, nisl mattis volutpat rhoncus,
+                    tellus est congue nibh, ut euismod quam nisi quis felis.
+                    Nullam at scelerisque tellus mattis volutpat rhoncus</span></h6>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-">
+                <div class="col-md-1 col-sm-12 col-xs-12 container-why" style="border: none;width: 7%"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 container-why">
+
+                    <div class="row text-title">
+                        
+                    </div>
+                    <div class="row text-center ">
+                        <div class="holder">
+                            <p><span class="text-titel-up ">YOUR TITLE</span></p>
+                            <p style="margin :12%; width: 75%" ><span class="text-titel-down">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </span> </p>
+                            <div class="block">
+                                <div class="text-see">
+                                    <span class="text-see">SEE MORE</span>
+                                    <div class="row row-marg">
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 container-why">
+
+                    <div class="row text-title">
+                        
+                    </div>
+                    <div class="row text-center ">
+                        <div class="holder">
+                            <p><span class="text-titel-up ">YOUR TITLE</span></p>
+                            <p style="margin :12%; width: 75%" >
+                                <span class="text-titel-down">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </span>
+                            </p>
+                            <div class="block">
+                                <div class="text-see">
+                                    <span class="text-see">SEE MORE</span>
+                                    <div class="row row-marg">
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 container-why">
+
+                    <div class="row text-title">
+                        
+                    </div>
+                    <div class="row text-center ">
+                        <div class="holder">
+                            <p><span class="text-titel-up ">YOUR TITLE</span></p>
+                            <p style="margin :12%; width: 75%" >
+                                <span class="text-titel-down">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </span>
+                            </p>
+                            <div class="block">
+                                <div class="text-see">
+                                    <span class="text-see">SEE MORE</span>
+                                    <div class="row row-marg">
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 container-why">
+
+                    <div class="row text-title">
+                        
+                    </div>
+                    <div class="row text-center ">
+                        <div class="holder">
+                            <p><span class="text-titel-up ">YOUR TITLE</span></p>
+                            <p style="margin :12%; width: 75%" >
+                                <span class="text-titel-down">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </span>
+                            </p>
+                            <div class="block">
+                                <div class="text-see">
+                                    <span class="text-see">SEE MORE</span>
+                                    <div class="row row-marg">
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 container-why">
+
+                    <div class="row text-title">
+                        
+                    </div>
+                    <div class="row text-center ">
+                        <div class="holder">
+                            <p><span class="text-titel-up ">YOUR TITLE</span></p>
+                            <p style="margin :12%; width: 75%" >
+                                <span class="text-titel-down">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </span>
+                            </p>
+                            <div class="block">
+                                <div class="text-see">
+                                    <span class="text-see">SEE MORE</span>
+                                    <div class="row row-marg">
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                        <a style="text-decoration: none"><span class="right-btn-search"></span></a>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="separator"></div>
+
+
+
+<!--About us-->
+<section id="about-us-section">
+<div class="container-fluid about-us" >
+    <div class="row" id="about">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                <div class="container get-about image">
+                    <p><span class="touch-color" id="about-us">ABOUT</span> US</p>
+                    <h6 class="get-about2">
+                        Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euism
+                        Nullam at scelerisque tellus mattis volutpat rhoncus.
+                    </h6>
+                    <h6  class="get-about3">
+                        Nullam at scelerisque tellus.
+                        Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a.
+                        Vestibulum accumsan tincidunt odio vel finibus.
+                        Phasellus vestibulum lobortis ligula ut volutpat.
+                        Maecenas vitae nibh vel purus mollis semper.
+                        Nullam tempus feugiat mi id semper.
+                        Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam.
+                    </h6>
+                    <!------------------------------------------------------------------------------------------------>
+                    <div class="row" style="margin-top:15% ">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>PHOTOSHOP</h5>
+                        </div>
+                        <div class="col-md-6 col-sm-6 right-text">
+                            <h5 id="label">0%</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="myProgress">
+                                <div id="myBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('.about-us').viewportChecker({
+                                classToAdd: 'visible',
+                                offset: 100,
+                                repeat: false,
+                                callbackFunction:function () {
+                                    move();
+                                }
+                            });
+
+                        });
+                    </script>
+                    <!------------------------------------------------------------------------------------------------>
+                    <div class="row" style="margin-top:5% ">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>HTML/CSS</h5>
+                        </div>
+                        <div class="col-md-6 col-sm-6 right-text">
+                            <h5 id="label2">90%</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="myProgress">
+                                <div id="myBar1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('.myProgress').viewportChecker({
+                                classToAdd: 'visible',
+                                offset: 100,
+                                repeat: false,
+                                callbackFunction:function () {
+                                    move1();
+                                }
+                            });
+
+                        });
+                    </script>
+                    <!------------------------------------------------------------------------------------------------>
+                    <div class="row" style="margin-top:5% ">
+                        <div class="col-md-6 col-sm-6 java">
+                            <h5>JAVASCRIPT</h5>
+                        </div>
+                        <div class="col-md-6 col-sm-6 right-text">
+                            <h5 id="label3">0%</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="myProgress">
+                                <div id="myBar2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('.java').viewportChecker({
+                                classToAdd: 'visible',
+                                offset: 100,
+                                repeat: false,
+                                callbackFunction:function () {
+                                    move2();
+                                }
+                            });
+
+                        });
+                    </script>
+                    <!------------------------------------------------------------------------------------------------>
+                    <div class="row" style="margin-top:5% ">
+                        <div class="col-md-6 col-sm-6 word">
+                            <h5>WORDPRESS</h5>
+                        </div>
+                        <div class="col-md-6 col-sm-6 right-text">
+                            <h5 id="label4">0%</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="myProgress">
+                                <div id="myBar3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('.word').viewportChecker({
+                                classToAdd: 'visible',
+                                offset: 100,
+                                repeat: false,
+                                callbackFunction:function () {
+                                    move3();
+                                }
+                            });
+
+                        });
+                    </script>
+                    <!------------------------------------------------------------------------------------------------>
+                </div>
+
+                </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img src="resourses/header/images/ipad.png" class="image">
+        </div>
+
+                </div>
+</div>
+</section>
+<div class="separator"></div>
+<!--end about us-->
+
+
+
+
+
+
+
+<!--Начало котнактов-->
+<section class="active" id="contacts">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 get-touch">
+            <div class="container .wight-container70">
+                <p>GET IN<span class="touch-color"> TOUCH</span> </p>
+                <h6><span id="normal">Quisque fermentum, nisl mattis volutpat rhoncus,
+                tellus est congue nibh, ut euismod quam nisi quis felis.
+                Nullam at scelerisque tellus mattis volutpat rhoncus,</span></h6>
+            </div></div>
+    </div>
+</div>
+    <!--форма отпарвки-->
+
+<div class="box">
+    <div class="map" id="map_canvas"></div>
+    <div class="block-adres">
+            <div class="container-adress">
+                <div class="col-md-8 col-xs-12">
+                    <form class="form-horizontal">
+                        <form class="form-inline">
+                           <div class="col-md-6 col-xs-12 " >
+                               <input type="text" placeholder="Full name" class="input-name">
+                           </div>
+                            <div class="col-md-6 col-xs-12">
+                                <select class="input-email">
+                                    <option><a class="disabled">E-mail adresses</a></option>
+                                    <option><a>company@mail.com</a></option>
+                                    <option><a>sale@mail.com</a></option>
+                                    <option><a>your@mail.com</a></option>
+
+                                </select>
+                            </div>
+                        </form>
+                        <div class="col-md-12 col-xs-12">
+                                <textarea rows="8"class="text-area"></textarea>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="col-md-12 col-xs-12 from-chek ">
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">I like your company!</span>
+                                </label>
+                                    <button class="btn buttom-submit" type="button">Send!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-xs-12 no-mobile text-company">
+                    <div class="container-fluid text-forms ">
+                        <p>69/A , Some Street</p>
+                        <p>Your City code 1535489</p>
+                        <p>Country Name</p>
+                        <p></p>
+                        <p></p>
+                        <p>+880 123 456 78 96</p>
+                        <p>+880 123 456 78 96</p>
+                        <p></p>
+                        <p></p>
+                        <p>company@gmail.com</p>
+                        <p>your@gmail.com</p>
+                    </div>
+                    <script>
+                        if(window.innerWidth < 800) {
+                            var body = (document.getElementByTagName("body"))[0];
+                            body.className = "mobile";
+                        }
+                    </script>
+                </div>
+            </div>
+    </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGV2xb-shxAI3pdkJcpBdrroH2Nffd74s"></script>
+<script type="text/javascript">
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(47.9056685, 33.4013124);
+        var myOptions = {
+            zoom: 15,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+
+        var myLatlng = new google.maps.LatLng(47.9056685, 33.4013124);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+
+        });
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+<!--конец формы отпарвки-->
+<!--Начало футера-->
+<div class="navbar navbar-inverse margin-bottom" style="border-radius: 0; border: 0">
+    <div class="container">
+
+
+        <div class="navbar-header">
+            <p class="copyright"> Copyright &copy Company.All right Reserved 2016. </p>
+        </div>
+
+
+                 <div class="container">
+            <ul class="nav navbar-nav navbar-right ">
+                <li><a href="http://facebook.com" > <img src="resourses/social/facebook.png"></a> </li>
+                <li><a href="http://google.com" > <img src="resourses/social/google.png"></a> </li>
+                <li><a href="http://twitter.com" > <img src="resourses/social/twitter-logo.png"></a> </li>
+                <li><a href="https://dribbble.com/" > <img src="resourses/social/dribbble.png"></a> </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</div>
+<!--конец футера-->
+</section>
+<!--Конец контактов-->
+</body>
+</html>
