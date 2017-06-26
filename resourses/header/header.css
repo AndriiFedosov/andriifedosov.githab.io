@@ -461,6 +461,15 @@ position: relative;
     margin-bottom: 20%;
 
 }
+.text-titel-up{
+    font-family: "Lato Heavy";
+    color: black;!important;
+    font-size: 13pt;
+}
+.text-titel-down{
+    color: #bdbdbd;
+    font-size: 8pt;
+}
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
