@@ -152,14 +152,7 @@
     margin-top: 30px;
     margin-bottom: 40px;
 }
-@font-face {
-    font-family: 'Lato';
-    src: url('fonts/lato/Lato-Black.ttf');
-    src: url('fonts/lato/Lato-Bold.ttf');
-    src: url('fonts/lato/Lato-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+
 .banner-font {
     font-family: Lato, normal, monospace ;
 }
@@ -380,69 +373,41 @@ position: relative;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
-#text-why{
-    font-family: Lato, fantasy;
-    font-size: 12pt;
-    color: #b4b4b4;
-}
-.why{
-    margin-top: 10%;
-}
-.text-wight{
-    width: 65%
-}
-
-.text-title{
-    font-family: FontAwesome;
-    font-size: 40pt;
-    color: #9939bd;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 20%;
-
-}
-.container-why{
-    margin: 1%;
-    height: 250px;
-    width: 170px;
-    border: solid;
-    border-color: #b942be;
-    border-width: 1px;
-}
-.down-details{
-    height: 50%;
-}
-
-.text-titel-up{
-    font-family: "Lato Heavy", sans-serif;
-    font-size: 12pt;
-    color: black;
-    text-align: center;
-    word-break: normal;
-}
-.text-titel-down{
-    font-family: "Lato Light",monospace;
-    color: #b4b4b4;
-    text-align: center;
-}
 .text-center{
     text-align: center;
-    height: 50%;
-    width: 168px;
 }
-.text-center:hover{
+.lato{
+    font-family: "Lato Heavy";
+    color: black;
+    font-size: 25pt;
+}
+.lato-second{
+    font-family: "Lato Heavy";
+    color: #3fb5db;
+    font-size: 25pt;
+}
+.lato-down{
+    font-family: Lato, monospace;
+    font-size: 15pt;
+    color: #9d9d9d;
+}
+.width65{
+    width: 65%;
+}
+.see-block{
+    margin-top: 15%;
+    width: 150px;
+    height: 100%;
     border-color: #9939bd;
+    border-style: solid;
+    border-width: 1px;
 }
-.text-center:hover{
-    background: darkviolet;
-    height: 52%
-}
-
 .holder{
     position:relative;
     width:100%;
     height:100%;
     background: none;
+    cursor: pointer;
 
 }
 .block{
@@ -454,6 +419,7 @@ position: relative;
     background: #966fd3;
     display:none;
     color: white;
+    cursor: pointer;
 
 }
 .holder:hover .block{
@@ -480,23 +446,20 @@ position: relative;
 }
 .serch{
     border: none;
-
 }
 
 .right-btn-search:hover{
     background: white;
     color: #9939bd;
 }
+.text-title{
+    font-family: FontAwesome;
+    font-size: 40pt;
+    color: #9939bd;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
 
-.row-marg{
-    margin-top: 15%;
-}
-.row-marg-botm{
-    margin-bottom: 2%;
-}
-.text-top{
-    margin :12%;
-    width: 75%
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
 
