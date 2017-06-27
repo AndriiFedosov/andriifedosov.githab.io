@@ -473,17 +473,23 @@ position: relative;
 
 @media (max-width: 600px) {
     #testCarousel{
-        margin-top: 5%;
+        margin-top: 15%;
     }
     body{
         font-size: 1.2em;
     }
-}
-@media (max-width: 600px) {
+    .margin-logo{
+        margin-left: 20%
+    }
+
     .row-marging{
         margin-bottom: 20%;
     }
+    .margin-left-container {
+        margin-left: 45%;
+    }
 }
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
