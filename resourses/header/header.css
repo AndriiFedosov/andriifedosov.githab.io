@@ -501,6 +501,14 @@ position: relative;
         margin-top: 2%;
 
     }
+    .carousel h2{
+        font-size: 2em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 2em;
+
+    }
 }
 
 
