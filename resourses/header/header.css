@@ -502,11 +502,11 @@ position: relative;
 
     }
     .carousel h2{
-        font-size: 2em;
+        font-size: 1em;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 2em;
+        font-size: 0.8em;
 
     }
 }
