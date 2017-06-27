@@ -125,6 +125,8 @@
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+
 .grad-background{
     background-image: linear-gradient(to right,dodgerblue,blueviolet)!important;
     opacity: 0.5;
@@ -473,47 +475,38 @@ position: relative;
     #testCarousel{
         margin-top: 13%;
     }
-
+    .margin-logo{
+        margin-left: 30%
+    }
+    .margin-left-container {
+        margin-left: 45%;
+    }
+    .carousel h2{
+        font-size: 1em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 0.5em;
+        margin-top: 2%;
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 600px) {
     .margin-logo{
         margin-left: 20%;
-        text-align: center;
     }
     .row-marging{
-        margin-bottom: 30%;
-    }
-
-    .carousel h2{
-        font-size: 2em;
-    }
-    .carousel p{
-        font-weight: bold;
-        font-size: 1em;
-        margin-top: 2%;
-        margin-bottom: 40px;
+        margin-bottom: 20%;
     }
 }
-@media (max-width: 322px) {
+@media (width: 320px) {
     .margin-logo{
-        margin-left: 0;
+        margin-left: 0%;!important;
         text-align: center;
     }
     .margin-left-container {
         margin-left: 42%;
-    }
-    .row-marging{
-        margin-bottom: 30%;
-    }
-
-    .carousel h2{
-        font-size: 1em;
-    }
-    .carousel p{
-        font-weight: bold;
-        font-size: 1em;
-
     }
 }
 @media (max-width: 1024px) {
@@ -522,6 +515,15 @@ position: relative;
     }
 
 
+    .carousel h2{
+        font-size: 1em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 0.5em;
+        margin-top: 2%;
+        margin-bottom: 40px;
+    }
 }
 
 
