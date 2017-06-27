@@ -197,7 +197,7 @@
 }
 .get-touch{
     height:200px;
-    font-family: "Lato Black", fantasy;
+    font-family: Lato,"Lato Black", fantasy;
     font-size: 32pt;
     text-align: center ;
     padding-top: 50px;
@@ -377,12 +377,13 @@ position: relative;
     text-align: center;
 }
 .lato{
-    font-family: "Lato Heavy",monospace;
+    font-family:Lato, "Lato Black",monospace;
     color: black;
     font-size: 25pt;
+
 }
 .lato-second{
-    font-family: "Lato Heavy",monospace;
+    font-family: Lato, "Lato Black",monospace;
     color: #3fb5db;
     font-size: 25pt;
 }
