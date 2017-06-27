@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <title>UpQode Test Page</title>
 
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -16,11 +17,11 @@
     <link href="resourses/header/fonts/lato/Lato/latostyle.css" rel="stylesheet" type="text/css">
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#menu1").on("click","a", function (event) {
+        $("#home").on("click","a", function (event) {
             event.preventDefault();
             var id  = $(this).attr('href'),
                 top = $(id).offset().top;
@@ -36,7 +37,7 @@
 
 <!--Хедер страници-->
 <section id="home">
-<div class="navbar navbar-default navbar-fixed-top margin-bottom " style="background-color: white">
+<div class="navbar navbar-default navbar-fixed-top z-index margin-bottom " style="background-color: white">
     <div class="container">
         <div class="navbar-header logo-padding">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -52,7 +53,6 @@
 
         <div class="navbar-collapse collapse">
             <div class="container">
-
                 <div class="container " id="menu1">
                     <ul class="nav navbar-nav navbar-right ">
                         <li><a href="#home">Home</a></li>
@@ -95,82 +95,83 @@
     </div>
 </div>
 </div>
+    <!--Карусель с банерами-->
+        <div id="testCarousel" class="carousel slide" data-ride="carousel" data-warp="true">
+
+            <!-- Индикаторы карусели -->
+            <ol class="carousel-indicators">
+                <!-- Перейти к слайду №0 с помощью соответствующего атрибута с индексом data-slide-to="0" -->
+                <li data-target="#testCarousel" data-slide-to="0"  class="active"></li>
+                <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="1" -->
+                <li data-target="#testCarousel" data-slide-to="1"></li>
+                <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="2" -->
+                <li data-target="#testCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div id="#testCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <!-- Слайды карусели -->
+                <div class="carousel-inner " style="margin-top: 0">
+                    <!-- Слайд 1 -->
+                    <div class="item active item1">
+                        <img src="resourses/header/images/baner.png" style="width: 100%" class="grad-background">
+                        <div class="carousel-caption banner-font baner-text-position">
+                            <h2><span class="baner-font-first">CREATIVE</span><span class="baner-font-second"> DESING AGEMMCY</span>  </h2>
+                            <p><span class="banner-font">
+                   Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                    Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor
+                </span> </p>
+                        </div>
+
+                    </div>
+                    <!-- Слайд 2 -->
+                    <div class="item ">
+                        <img src="resourses/header/images/cat.png" style="width: 100%"  class="grad-background" >
+                        <div class="carousel-caption banner-font baner-text-position">
+                            <h2><span class="baner-font-first">CAT</span><span class="baner-font-second">  IS WONDERFUL</span>  </h2>
+                            <p><span class="banner-font">Этот кот принесет вам удачу если будете хорошо просить</span></p>
+                        </div>
+                    </div>
+                    <!-- Слайд 3 -->
+                    <div class="item" >
+                        <img src="resourses/header/images/future.png" style="width: 100%; height: 100%" class="grad-background">
+                        <div class="carousel-caption banner-font baner-text-position">
+                            <h2><span class="baner-font-first">Future</span><span class="baner-font-second"> BEYOND </span>  </h2>
+                            <p><span class="banner-font">Путешествие в будущее но не надолго</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Навигация карусели (следующий или предыдущий слайд) -->
+                <!-- Кнопка, переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+                <a class="left carousel-control" href="#testCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <!-- Кнопка, переход на следующий слайд с помощью атрибута data-slide="next" -->
+                <a class="right carousel-control" href="#testCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.carousel').each(function(){
+                $(this).carousel({
+                    interval: Math.random()*(10000-4000)+4000
+                });
+            });
+        </script>
+    <!--Конец кусели-->
 </section>
 <div class="separator"></div>
 <!--Хєдер старници -->
 
 
-<!--Карусель с банерами-->
-<div id="testCarousel" class="carousel slide" data-ride="carousel" data-warp="true">
 
-    <!-- Индикаторы карусели -->
-    <ol class="carousel-indicators">
-        <!-- Перейти к слайду №0 с помощью соответствующего атрибута с индексом data-slide-to="0" -->
-        <li data-target="#testCarousel" data-slide-to="0"  class="active"></li>
-        <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="1" -->
-        <li data-target="#testCarousel" data-slide-to="1"></li>
-        <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="2" -->
-        <li data-target="#testCarousel" data-slide-to="2"></li>
-    </ol>
-
-<div id="#testCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-    <!-- Слайды карусели -->
-    <div class="carousel-inner " style="margin-top: 0">
-        <!-- Слайд 1 -->
-        <div class="item active item1">
-            <img src="resourses/header/images/baner.png" style="width: 100%" class="grad-background">
-            <div class="carousel-caption banner-font baner-text-position">
-                <h2><span class="baner-font-first">CREATIVE</span><span class="baner-font-second"> DESING AGEMMCY</span>  </h2>
-                <p><span class="banner-font">
-                   Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                    Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor
-                </span> </p>
-            </div>
-
-        </div>
-        <!-- Слайд 2 -->
-        <div class="item ">
-            <img src="resourses/header/images/cat.png" style="width: 100%"  class="grad-background" >
-            <div class="carousel-caption banner-font baner-text-position">
-                <h2><span class="baner-font-first">CAT</span><span class="baner-font-second">  IS WONDERFUL</span>  </h2>
-                <p><span class="banner-font">Этот кот принесет вам удачу если будете хорошо просить</span></p>
-            </div>
-        </div>
-        <!-- Слайд 3 -->
-        <div class="item" >
-            <img src="resourses/header/images/future.png" style="width: 100%; height: 100%" class="grad-background">
-            <div class="carousel-caption banner-font baner-text-position">
-                <h2><span class="baner-font-first">Future</span><span class="baner-font-second"> BEYOND </span>  </h2>
-                <p><span class="banner-font">Путешествие в будущее но не надолго</span></p>
-            </div>
-        </div>
-    </div>
-    <!-- Навигация карусели (следующий или предыдущий слайд) -->
-    <!-- Кнопка, переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
-    <a class="left carousel-control" href="#testCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <!-- Кнопка, переход на следующий слайд с помощью атрибута data-slide="next" -->
-    <a class="right carousel-control" href="#testCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-</div>
-</div>
-<script type="text/javascript">
-    $('.carousel').each(function(){
-        $(this).carousel({
-            interval: Math.random()*(10000-4000)+4000
-        });
-    });
-</script>
-<!--Конец кусели-->
 
 
 
 <!--Why us chose us-->
 <section id="why">
     <div class="container" style="padding-top: 5%">
-        <div class="row">
+        <div class="row" style="margin-bottom: 5%">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="container text-center">
                     <p><span class="lato">WHY</span>
@@ -186,7 +187,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="container">
+        <div class="container" style="margin-bottom: 5%" >
             <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"></div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="container see-block">
@@ -336,8 +337,8 @@
 <!--About us-->
 <section id="about-us-section">
 <div class="container-fluid about-us" >
-    <div class="row" id="about">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+    <div class="row" id="about" style="height: 80%">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  " >
                 <div class="container get-about image">
                     <p><span class="touch-color" id="about-us">ABOUT</span> US</p>
                     <h6 class="get-about2">
@@ -471,11 +472,10 @@
                     </script>
                     <!------------------------------------------------------------------------------------------------>
                 </div>
-
                 </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <img src="resourses/header/images/ipad.png" class="image">
-        </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                <img src="resourses/header/images/ipad.png" class="image">
+            </div>
 
                 </div>
 </div>
@@ -492,9 +492,9 @@
 <!--Начало котнактов-->
 <section class="active" id="contacts">
 <div class="container">
-    <div class="row">
+    <div class="row row-marging">
         <div class="col-lg-12 col-md-12 col-sm-12 get-touch">
-            <div class="container .wight-container70">
+            <div class="container .wight-container70 ">
                 <p>GET IN<span class="touch-color"> TOUCH</span> </p>
                 <h6><span id="normal">Quisque fermentum, nisl mattis volutpat rhoncus,
                 tellus est congue nibh, ut euismod quam nisi quis felis.

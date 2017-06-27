@@ -335,10 +335,10 @@
     color: #3fb5db;
 }
 .image{
-    margin-top:10% ;
-    margin-left:17%;
-    height: 70%;
+    margin-top: 10%;
+    margin-left:15% ;
     width: 70%;
+    height: 70%;
 }
 .get-about2{
     color: #9d9d9d;
@@ -469,6 +469,20 @@ position: relative;
 .text-titel-down{
     color: #bdbdbd;
     font-size: 8pt;
+}
+
+@media (max-width: 600px) {
+    #testCarousel{
+        margin-top: 5%;
+    }
+    body{
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 600px) {
+    .row-marging{
+        margin-bottom: 20%;
+    }
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
 
