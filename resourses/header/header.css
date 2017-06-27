@@ -483,13 +483,13 @@ position: relative;
         margin-left: 45%;
     }
     .carousel h2{
-        font-size: 1em;
+        font-size: 2em;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 0.5em;
+        font-size: 1em;
         margin-top: 2%;
-        margin-bottom: 40px;
+        margin-bottom: 1%;
     }
 }
 
@@ -499,6 +499,15 @@ position: relative;
     }
     .row-marging{
         margin-bottom: 20%;
+    }
+    .carousel h2{
+        font-size: 1.5em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 0.8em;
+        margin-top: 2%;
+        margin-bottom: 40px;
     }
 }
 @media (width: 320px) {
