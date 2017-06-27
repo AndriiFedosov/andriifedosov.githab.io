@@ -477,12 +477,12 @@ position: relative;
         font-size: 2em;
     }
     .carousel h2{
-        font-size: 1.2em;
+        font-size: 1em;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 0.8em;
-   
+        font-size: 0.5em;
+
     }
 }
 @media (max-width: 768px) {
@@ -506,7 +506,7 @@ position: relative;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.5em;
 
     }
 }
@@ -524,7 +524,7 @@ position: relative;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.5em;
         margin-top: 2%;
         margin-bottom: 40px;
     }
@@ -542,7 +542,7 @@ position: relative;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.5em;
 
     }
 }
