@@ -203,12 +203,10 @@
 .touch-color{
     color: #3fb5db;
 }
-.wight-container70{
-    width: 70%
-}
+
 #normal{
     font-family: Lato, fantasy;
-    font-size: 12pt;
+    font-size: 1.3em;
     color: #999999;
 }
 .margin-footer{
@@ -377,12 +375,12 @@ position: relative;
     text-align: center;
 }
 .lato{
-    font-family: "Lato Heavy";
+    font-family: "Lato Heavy",monospace;
     color: black;
     font-size: 25pt;
 }
 .lato-second{
-    font-family: "Lato Heavy";
+    font-family: "Lato Heavy",monospace;
     color: #3fb5db;
     font-size: 25pt;
 }
@@ -475,27 +473,26 @@ position: relative;
     #testCarousel{
         margin-top: 13%;
     }
-    .margin-logo{
-        margin-left: 30%
-    }
-    .margin-left-container {
-        margin-left: 45%;
-    }
-    .carousel h2{
-        font-size: 1em;
-    }
-    .carousel p{
-        font-weight: bold;
-        font-size: 0.5em;
-        margin-top: 2%;
-        margin-bottom: 40px;
-    }
+
 }
 
 @media (max-width: 600px) {
     .margin-logo{
         margin-left: 20%;
         text-align: center;
+    }
+    .row-marging{
+        margin-bottom: 30%;
+    }
+
+    .carousel h2{
+        font-size: 2em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 1em;
+        margin-top: 2%;
+        margin-bottom: 40px;
     }
 }
 @media (max-width: 322px) {
@@ -506,26 +503,25 @@ position: relative;
     .margin-left-container {
         margin-left: 42%;
     }
-}
-@media (max-width: 1024px) {
-    #testCarousel{
-        margin-top: 13%;
+    .row-marging{
+        margin-bottom: 30%;
     }
-    .margin-logo{
-        margin-left: 30%
-    }
-    .margin-left-container {
-        margin-left: 45%;
-    }
+
     .carousel h2{
         font-size: 1em;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 0.5em;
-        margin-top: 2%;
-        margin-bottom: 40px;
+        font-size: 1em;
+
     }
+}
+@media (max-width: 1024px) {
+    #testCarousel{
+        margin-top: 13%;
+    }
+
+
 }
 
 
