@@ -487,7 +487,7 @@ position: relative;
 }
 @media (max-width: 768px) {
     #testCarousel{
-        margin-top: 5%;
+        margin-top: 15%;
     }
     .margin-logo{
         margin-left: 30%
