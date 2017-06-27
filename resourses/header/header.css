@@ -139,6 +139,7 @@
     text-align: center;
     background-position: center;
     height: auto;
+    width: auto;
     background-image: linear-gradient(to right,dodgerblue,blueviolet)!important;
 
 }
@@ -472,9 +473,6 @@ position: relative;
     font-size: 8pt;
 }
 @media (max-width: 1024px) {
-    #testCarousel{
-        margin-top: 13%;
-    }
 
 
     .carousel h2{
@@ -489,7 +487,7 @@ position: relative;
 }
 @media (max-width: 768px) {
     #testCarousel{
-        margin-top: 13%;
+        margin-top: 5%;
     }
     .margin-logo{
         margin-left: 30%
@@ -501,9 +499,10 @@ position: relative;
     .carousel p{
 
         margin-top: 2%;
-        
+
     }
 }
+
 
 @media (max-width: 600px) {
     .margin-logo{
