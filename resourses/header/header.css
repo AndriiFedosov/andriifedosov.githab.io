@@ -473,8 +473,6 @@ position: relative;
     font-size: 8pt;
 }
 @media (max-width: 1024px) {
-
-
     .carousel h2{
         font-size: 2em;
     }
@@ -520,11 +518,11 @@ position: relative;
         margin-bottom: 20%;
     }
     .carousel h2{
-        font-size: 2em;
+        font-size: 1.2em;
     }
     .carousel p{
         font-weight: bold;
-        font-size: 2em;
+        font-size: 1em;
         margin-top: 2%;
         margin-bottom: 40px;
     }
@@ -536,6 +534,13 @@ position: relative;
     }
     .margin-left-container {
         margin-left: 42%;
+    }
+    .carousel h2{
+        font-size: 1.2em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 1em;
     }
 }
 
