@@ -471,7 +471,22 @@ position: relative;
     color: #bdbdbd;
     font-size: 8pt;
 }
+@media (max-width: 1024px) {
+    #testCarousel{
+        margin-top: 13%;
+    }
 
+
+    .carousel h2{
+        font-size: 2em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 1em;
+        margin-top: 2%;
+        
+    }
+}
 @media (max-width: 768px) {
     #testCarousel{
         margin-top: 13%;
@@ -519,22 +534,7 @@ position: relative;
         margin-left: 42%;
     }
 }
-@media (max-width: 1024px) {
-    #testCarousel{
-        margin-top: 13%;
-    }
 
-
-    .carousel h2{
-        font-size: 1em;
-    }
-    .carousel p{
-        font-weight: bold;
-        font-size: 0.5em;
-        margin-top: 2%;
-        margin-bottom: 40px;
-    }
-}
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
