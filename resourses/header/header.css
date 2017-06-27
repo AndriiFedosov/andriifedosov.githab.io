@@ -144,11 +144,11 @@
     color: #fff;
     margin: 0;
     padding-top: 50px;
-    font-size: 48px;
+    font-size: 3em;
 }
 .carousel p{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.5em;
     margin-top: 30px;
     margin-bottom: 40px;
 }
@@ -471,28 +471,63 @@ position: relative;
     font-size: 8pt;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #testCarousel{
-        margin-top: 15%;
-    }
-    body{
-        font-size: 1.2em;
+        margin-top: 13%;
     }
     .margin-logo{
-        margin-left: 20%
+        margin-left: 30%
     }
     .margin-left-container {
         margin-left: 45%;
     }
+    .carousel h2{
+        font-size: 1em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 0.5em;
+        margin-top: 2%;
+        margin-bottom: 40px;
+    }
 }
-@media (width: 320px) {
+
+@media (max-width: 600px) {
     .margin-logo{
-        margin-left: 12%
+        margin-left: 20%;
+        text-align: center;
+    }
+}
+@media (max-width: 322px) {
+    .margin-logo{
+        margin-left: 0;
+        text-align: center;
     }
     .margin-left-container {
         margin-left: 42%;
     }
 }
+@media (max-width: 1024px) {
+    #testCarousel{
+        margin-top: 13%;
+    }
+    .margin-logo{
+        margin-left: 30%
+    }
+    .margin-left-container {
+        margin-left: 45%;
+    }
+    .carousel h2{
+        font-size: 1em;
+    }
+    .carousel p{
+        font-weight: bold;
+        font-size: 0.5em;
+        margin-top: 2%;
+        margin-bottom: 40px;
+    }
+}
+
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
