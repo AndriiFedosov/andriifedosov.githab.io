@@ -377,13 +377,13 @@ position: relative;
     text-align: center;
 }
 .lato{
-    font-family:Lato, "Lato Black",monospace;
+    /*font-family:Lato, "Lato Black",monospace;*/
     color: black;
     font-size: 25pt;
 
 }
 .lato-second{
-    font-family: Lato, "Lato Black",monospace;
+    /*font-family: Lato, "Lato Black",monospace;*/
     color: #3fb5db;
     font-size: 25pt;
 }
