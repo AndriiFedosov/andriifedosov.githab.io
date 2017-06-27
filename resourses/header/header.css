@@ -485,7 +485,7 @@ position: relative;
         margin-left: 45%;
     }
 }
-@media (max-width: 320px) {
+@media (width: 320px) {
     .margin-logo{
         margin-left: 12%
     }
