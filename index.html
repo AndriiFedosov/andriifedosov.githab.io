@@ -569,39 +569,50 @@
 <div class="box">
     <!--размечаем блок для подальщей эксплуатации и инициализации карты-->
     <div class="map" id="map_canvas"></div>
+    <!--создаем внутренний блок с отправкой формі-->
     <div class="block-adres">
+        <!--создаем конетейнер и кастомизируем его для форм-->
             <div class="container-adress">
                 <div class="col-md-8 col-xs-12">
-                    <form class="form-horizontal">
-                        <form class="form-inline">
+                    <!--указываем что создаем горизонтальню форму-->
+                    <form id="application" action="index.html" class="form-horizontal">
+                        <!--создаем поля для отправки-->
+                        <div class="form-inline">
                            <div class="col-md-6 col-xs-12 " >
-                               <input type="text" placeholder="Full name" class="input-name">
+                               <!--создаем поле имени человека который будет отправлять проверяем что орма не пуста-->
+                               <input name="name" placeholder="Full name" class="input-name" required>
                            </div>
+                            <!--создаем список адресов для выбора-->
                             <div class="col-md-6 col-xs-12">
                                     <select class="input-email">
-                                        <option class="opt"><span class="hov">E-mail adresses</span></option>
+                                        <option class="opt"><span class="hov disabled">E-mail adresses</span></option>
                                         <option class="opt">company@mail.com</option>
                                         <option class="opt">sale@mail.com</option>
                                         <option class="opt">your@mail.com</option>
-
                                     </select>
                             </div>
-                        </form>
+                        </div>
+                        <!--создаем текстовое поле для отправки соообщения-->
                         <div class="col-md-12 col-xs-12">
-                                <textarea rows="8" class="text-area"></textarea>
+                            <!--указываем максимальное количество строк для заполнения и проверяем не пуста ли форма-->
+                                <textarea rows="8" class="text-area" required></textarea>
                         </div>
                         <div class="container-fluid">
                             <div class="col-md-12 col-xs-12 from-chek ">
                                 <label>
-                                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                                    <!--создаем чекбокс если не стоит галочка форма не отправится-->
+                                    <input class="checkbox" type="checkbox" name="checkbox-test" required >
                                     <span class="checkbox-custom"></span>
                                     <span class="label">I like your company!</span>
+                                    
                                 </label>
-                                    <button class="btn buttom-submit" type="button">Send!</button>
+                                <!--создаем кнопку формы отправки-->
+                                <button class="btn buttom-submit" type="submit" form="application">Send!</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <!--созздаем контейнер с контактами-->
                 <div class="col-md-4 col-xs-12 no-mobile text-company">
                     <div class="container-fluid text-forms ">
                         <p>69/A , Some Street</p>
@@ -616,12 +627,6 @@
                         <p>company@gmail.com</p>
                         <p>your@gmail.com</p>
                     </div>
-                    <script>
-                        if(window.innerWidth < 80) {
-                            var body = (document.getElementByTagName("body"))[0];
-                            body.className = "mobile";
-                        }
-                    </script>
                 </div>
             </div>
     </div>
@@ -631,40 +636,51 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGV2xb-shxAI3pdkJcpBdrroH2Nffd74s"></script>
     <!--пишем скрипт инициализации гугл карты с задаными координатами-->
 <script type="text/javascript">
+    //пишем функцию инициализации карты
     function initialize() {
+        //вносим в переменную новое метоположение на нашей гуг карте (здесь мой родной город)
         var myLatlng = new google.maps.LatLng(47.9056685, 33.4013124);
+        //указывааем переменну для определения стилизации
         var myOptions = {
+            //увеличение карты
             zoom: 15,
+            //центрирование по координатам
             center: myLatlng,
+            //тип карты карта не со спутника
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
+        //указываем контейнер в котором создается карта (находим его по id)
         var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-
+        //создаем флажок(маркер) на карте с теми же координатами
         var myLatlng = new google.maps.LatLng(47.9056685, 33.4013124);
         var marker = new google.maps.Marker({
+            //иницилизируем маркер на выбраной карте
             position: myLatlng,
             map: map,
-
         });
-
     }
-
+    //инициализируем нашу карту
     google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
 <!--конец формы отпарвки-->
+
+
 <!--Начало футера-->
+    <!--по анологии хэдера создаем футер-->
 <div class="navbar navbar-inverse margin-bottom" style="border-radius: 0; border: 0">
 
     <div class="container">
-
+        <!--создаем текстовое поле-->
         <div class="navbar-header ">
             <p class="copyright margin-logo"> Copyright &copy Company. All right Reserved 2016. </p>
         </div>
 
-
+        <!--создаем поле иконок с ссылками -->
+        <!--кастомизируем его для разных устройств-->
         <div class="container margin-left-container">
+            <!--создаем список  соц сетей-->
             <ul class="nav navbar-nav navbar-right ">
                 <li><a href="http://facebook.com" > <img src="resourses/social/facebook.png"></a> </li>
                 <li><a href="http://google.com" > <img src="resourses/social/google.png"></a> </li>
