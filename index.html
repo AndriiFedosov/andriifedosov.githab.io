@@ -27,7 +27,7 @@
 
 </head>
 
-<!--включаем отслеживание за скролингом по странице Б при прокрутке до определенного блока будет подсвечен пункт меню в
+<!--включаем отслеживание за скролингом по странице, при прокрутке до определенного блока будет подсвечен пункт меню в
     хедере,-->
 <body data-spy="scroll" data-target=".navbar" data-offset="70">
 <!--пишем скрипт палавного скролинга по странице-->
@@ -80,7 +80,7 @@
                     <ul class="nav navbar-nav navbar-right ">
                         <li><a href="#home">Home</a></li>
                             <!--создаем выпадающее меню со своими стилясми-->
-                        <li class="dropdown dropdown-main">
+                        <li class="dropdown dropdown-main ">
                             <!--указываем что будет главным элементо(названием) выпадающего меню-->
                             <a href="#why" class="dropdown-toggle" data-toggle="dropdown dropdown-main">Products</a>
                             <!--указываем лист дочерних элементво выпадающего меню-->
@@ -90,6 +90,7 @@
                                 <!--создаем дочернее выпадающее меню с помощью класа dropdown-submenu придаем ему вид главного выпадающего меню-->
                                 <li class="dropdown dropdown-submenu dropdown-main dropdown-submenu-main">
                                     <!--создаем пункты выпадающего саб-меню-->
+                                    <!--используем в качестве спискового тригера иконку из Font Awesome-->
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown-main"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Nelson Noa Chris</a>
                                     <ul class="dropdown-menu dropdown-menu-main">
                                         <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surnam</a></li>
@@ -123,19 +124,20 @@
 </div>
 </div>
     <!--Карусель с банерами-->
-        <div id="testCarousel" class="carousel slide" data-ride="carousel" data-warp="true">
+        <!--создаем карусель-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-warp="true">
 
             <!-- Индикаторы карусели -->
             <ol class="carousel-indicators">
                 <!-- Перейти к слайду №0 с помощью соответствующего атрибута с индексом data-slide-to="0" -->
-                <li data-target="#testCarousel" data-slide-to="0"  class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="0"  class="active"></li>
                 <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="1" -->
-                <li data-target="#testCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
                 <!-- Перейти к слайду №1 с помощью соответствующего индекса data-slide-to="2" -->
-                <li data-target="#testCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
 
-            <div id="#testCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div id="#myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
                 <!-- Слайды карусели -->
                 <div class="carousel-inner " style="margin-top: 0">
                     <!-- Слайд 1 -->
@@ -169,24 +171,30 @@
                 </div>
                 <!-- Навигация карусели (следующий или предыдущий слайд) -->
                 <!-- Кнопка, переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
-                <a class="left carousel-control" href="#testCarousel" role="button" data-slide="prev">
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
                 <!-- Кнопка, переход на следующий слайд с помощью атрибута data-slide="next" -->
-                <a class="right carousel-control" href="#testCarousel" role="button" data-slide="next">
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div>
         </div>
+    <!--создаем скрипт для задания разного интервала прокрутки слайдов-->
         <script type="text/javascript">
+            //при вызове карусели вызывается функция
             $('.carousel').each(function(){
+                //указываем для какаой карусели вызывается интервал
                 $(this).carousel({
-                    interval: Math.random()*(10000-4000)+4000
+                    //с помощью функкции Math.random() задаем произвольное число которое равно от 0 до 1 и умнажаем его
+                    //на количество милисикунд которое мы хотим таким образом задаем для каждого слайда разный интервал
+                    interval: Math.random()*(7000-4000)+2000
                 });
             });
         </script>
     <!--Конец кусели-->
 </section>
+<!--создакем див с класом сепаратор который будет отделять наши секции-->
 <div class="separator"></div>
 <!--Хєдер старници -->
 
@@ -197,9 +205,13 @@
 
 <!--Why us chose us-->
 <section id="why">
+    <!--создаем контейнер для нового блока-->
     <div class="container"  style="padding-top: 5%">
+        <!--создаем линию в которую будем помещать наш текст-->
         <div class="row" style="margin-bottom: 5%">
+            <!--с помощью бутстрапа размечаем линию и как она будет отображаться на разных устройствах-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!--создаем наш текс и кастомизируем его в нашем css файле-->
                 <div class="container text-center ">
                     <p><span class="lato">WHY </span>
                         <span class="lato-second "> CHOUS US</span></p>
@@ -213,36 +225,42 @@
                 </div>
             </div>
         </div>
-        <div class="clearfix"></div>
+            <!--создаем контейнер к отором будут наши блоки с разными "SEE MORE"-->
         <div class="container" style="margin-bottom: 5%" >
+            <!--создаем пустой блок для легчего деления сетки на пять частей-->
             <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"></div>
+            <!--создаем первый блок указываем как он будет отображаться на разных устройствах-->
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <!--создаем контейнер и кастомизируем его с помощью css-->
                 <div class="container see-block">
+                    <!--все изображения в макете есть в виде иконок в Font Awesome в кажжом блоке используем их-->
                     <div class="row text-title">
+                        <!--класс иконки который нам нужен-->
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                     </div>
+                    <!--создаем блок с описанием-->
                     <div class="row text-center ">
+                        <!--создаем видимый блок с описанием-->
                         <div class="holder">
                             <p><span class="text-titel-up ">YOUR TITLE</span></p>
                             <p style="margin :12%; width: 75%" ><span class="text-titel-down">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </span> </p>
+                            <!--создаем блок который будет виден при наведении-->
                             <div class="block">
                                 <div class="text-see">
                                     <span class="text-see">SEE MORE</span>
                                     <div class="row row-marg"  style="margin-top:10%">
+                                        <!--создаем две иконки они так же находятся в Font Awesome-->
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <!--по аналогии с первым блоком создаем второй блок-->
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="container see-block">
                     <div class="row text-title">
@@ -259,17 +277,13 @@
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+            <!--по аналогии с первым блоком создаем третий блок-->
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="container see-block">
                     <div class="row text-title">
@@ -286,17 +300,14 @@
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <!--по аналогии с первым блоком создаем четвертый блок-->
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="container see-block">
                     <div class="row text-title">
@@ -313,17 +324,14 @@
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                         <a style="text-decoration: none"><span class="right-btn-search"></span></a>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <!--по аналогии с первым блоком создаем пятый блок-->
             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                 <div class="container see-block">
                     <div class="row text-title text-centre-article">
@@ -351,6 +359,7 @@
 
                 </div>
             </div>
+            <!--создаем еще один пустой блок для правильного отображения на экране-->
             <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"></div>
 
 
@@ -363,148 +372,172 @@
 
 <!--About us-->
 <section id="about-us-section">
+    <!--создаем контейнер в котором будет блок "О НАС"-->
 <div class="container-fluid about-us" >
-    <div class="row" id="about" style="height: 80%">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  " >
-                <div class="container get-about image">
-                    <p><span class="touch-color" id="about-us">ABOUT</span> US</p>
-                    <h6 class="get-about2">
-                        Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euism
-                        Nullam at scelerisque tellus mattis volutpat rhoncus.
-                    </h6>
-                    <h6  class="get-about3">
-                        Nullam at scelerisque tellus.
-                        Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a.
-                        Vestibulum accumsan tincidunt odio vel finibus.
-                        Phasellus vestibulum lobortis ligula ut volutpat.
-                        Maecenas vitae nibh vel purus mollis semper.
-                        Nullam tempus feugiat mi id semper.
-                        Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam.
-                    </h6>
-                    <!------------------------------------------------------------------------------------------------>
-                    <div class="row" style="margin-top:15% ">
-                        <div class="col-md-6 col-sm-6">
-                            <h5>PHOTOSHOP</h5>
-                        </div>
-                        <div class="col-md-6 col-sm-6 right-text">
-                            <h5 id="label">0%</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="myProgress">
-                                <div id="myBar"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('.about-us').viewportChecker({
-                                classToAdd: 'visible',
-                                offset: 100,
-                                repeat: false,
-                                callbackFunction:function () {
-                                    move();
-                                }
-                            });
+        <!--создаем линию на которой будет нахадится два блока-->
+        <div id="about">
+            <!--создаем первый блок с текстом и прогрессбарами указываем как он должен отображаться на разных устройствах-->
 
-                        });
-                    </script>
-                    <!------------------------------------------------------------------------------------------------>
-                    <div class="row" style="margin-top:5% ">
-                        <div class="col-md-6 col-sm-6">
-                            <h5>HTML/CSS</h5>
-                        </div>
-                        <div class="col-md-6 col-sm-6 right-text">
-                            <h5 id="label2">90%</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="myProgress">
-                                <div id="myBar1"></div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12   " >
+                    <!--создаем контейнер с текстом сатомизируем его-->
+                    <div class="container get-about block2 image image2">
+                        <p><span class="touch-color" id="about-us">ABOUT</span> US</p>
+                        <h6 class="get-about2">
+                            Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euism
+                            Nullam at scelerisque tellus mattis volutpat rhoncus.
+                        </h6>
+                        <h2  class="get-about3">
+                            Nullam at scelerisque tellus.
+                            Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a.
+                            Vestibulum accumsan tincidunt odio vel finibus.
+                            Phasellus vestibulum lobortis ligula ut volutpat.
+                            Maecenas vitae nibh vel purus mollis semper.
+                            Nullam tempus feugiat mi id semper.
+                            Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam.
+                        </h2>
+                        <!------------------------------------------------------------------------------------------------>
+                            <!--создаем первый прогрес бар с названием и процентами-->
+                            <div class="row " style="margin-top:15% ">
+                                <div class="col-md-6 col-sm-6">
+                                    <h5>PHOTOSHOP</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 right-text">
+                                    <h5 id="label">0%</h5>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('.myProgress').viewportChecker({
-                                classToAdd: 'visible',
-                                offset: 100,
-                                repeat: false,
-                                callbackFunction:function () {
-                                    move1();
-                                }
-                            });
-
-                        });
-                    </script>
-                    <!------------------------------------------------------------------------------------------------>
-                    <div class="row" style="margin-top:5% ">
-                        <div class="col-md-6 col-sm-6 java">
-                            <h5>JAVASCRIPT</h5>
-                        </div>
-                        <div class="col-md-6 col-sm-6 right-text">
-                            <h5 id="label3">0%</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="myProgress">
-                                <div id="myBar2"></div>
+                            <!--создаем непосредсвтенно прогрес бар который будет отрабатывать-->
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="myProgress">
+                                        <div id="myBar"></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('.java').viewportChecker({
-                                classToAdd: 'visible',
-                                offset: 100,
-                                repeat: false,
-                                callbackFunction:function () {
-                                    move2();
-                                }
-                            });
-
-                        });
-                    </script>
-                    <!------------------------------------------------------------------------------------------------>
-                    <div class="row" style="margin-top:5% ">
-                        <div class="col-md-6 col-sm-6 word">
-                            <h5>WORDPRESS</h5>
-                        </div>
-                        <div class="col-md-6 col-sm-6 right-text">
-                            <h5 id="label4">0%</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="myProgress">
-                                <div id="myBar3"></div>
+                            <!--создаем скрипт который будет отрпабатывать и заполняться-->
+                            <script type="text/javascript">
+                                //мы подключали viewport.js для отслеживания появления части страници
+                                //мы подключали myjs.js в котором написаны функции который выхываются в данном блоке
+                                //создаим функцию котора отрабатывает один раз
+                                $(document).ready(function(){
+                                    //проверяется отображается ли класс
+                                    $('.about-us').viewportChecker({
+                                        //переменная отображения класа
+                                        classToAdd: 'visible',
+                                        //отсуп от верза в пикселях от класса
+                                        offset: 100,
+                                        //указывать повторять ли функцию
+                                        repeat: false,
+                                        //вызов необходимой функции и заполнение прогрес бара
+                                        callbackFunction:function () {
+                                            //описание функции указано в файле myjs.js
+                                            move();
+                                        }
+                                    });
+                                });
+                            </script>
+                        <!------------------------------------------------------------------------------------------------>
+                            <!--по анологии с первым прогресс баром создаем второй -->
+                            <div class="row" style="margin-top:5% ">
+                                <div class="col-md-6 col-sm-6">
+                                    <h5>HTML/CSS</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 right-text">
+                                    <h5 id="label2">0%</h5>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('.word').viewportChecker({
-                                classToAdd: 'visible',
-                                offset: 100,
-                                repeat: false,
-                                callbackFunction:function () {
-                                    move3();
-                                }
-                            });
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="myProgress">
+                                        <div id="myBar1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    $('.myProgress').viewportChecker({
+                                        classToAdd: 'visible',
+                                        offset: 100,
+                                        repeat: false,
+                                        callbackFunction:function () {
+                                            move1();
+                                        }
+                                    });
 
-                        });
-                    </script>
-                    <!------------------------------------------------------------------------------------------------>
+                                });
+                            </script>
+                        <!------------------------------------------------------------------------------------------------>
+                        <!--по анологии с первым прогресс баром создаем третий -->
+                            <div class="row" style="margin-top:5% ">
+                                <div class="col-md-6 col-sm-6 java">
+                                    <h5>JAVASCRIPT</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 right-text">
+                                    <h5 id="label3">0%</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="myProgress">
+                                        <div id="myBar2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    $('.java').viewportChecker({
+                                        classToAdd: 'visible',
+                                        offset: 100,
+                                        repeat: false,
+                                        callbackFunction:function () {
+                                            move2();
+                                        }
+                                    });
+
+                                });
+                            </script>
+                        <!------------------------------------------------------------------------------------------------>
+                        <!--по анологии с первым прогресс баром создаем четвертый -->
+
+                            <div class="row" style="margin-top:5% ">
+                                <div class="col-md-6 col-sm-6 word">
+                                    <h5>WORDPRESS</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 right-text">
+                                    <h5 id="label4">0%</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="myProgress">
+                                        <div id="myBar3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    $('.word').viewportChecker({
+                                        classToAdd: 'visible',
+                                        offset: 100,
+                                        repeat: false,
+                                        callbackFunction:function () {
+                                            move3();
+                                        }
+                                    });
+
+                                });
+                            </script>
+                        <!------------------------------------------------------------------------------------------------>
+                    </div>
                 </div>
-                </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                <img src="resourses/header/images/ipad.png" class="image">
-            </div>
 
+            <!--создаем второй блок с картинкой-->
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                    <img src="resourses/header/images/ipad.png" class="image block2">
                 </div>
+
+
+        </div>
 </div>
 </section>
 <div class="separator"></div>
@@ -515,12 +548,14 @@
 
 
 
-
 <!--Начало котнактов-->
 <section class="active" id="contacts">
+    <!--создаем первый блок с тектом Get in touch-->
 <div class="container">
     <div class="row row-marging">
+        <!--указываем как будет выглядеть наш блок на разных устройствах-->
         <div class="col-lg-12 col-md-12 col-sm-12 ">
+            <!--сатомизируем его в css-->
             <div class="container wight-container70 get-touch ">
                 <p>GET IN<span class="touch-color"> TOUCH</span> </p>
                 <h6><span id="normal">Quisque fermentum, nisl mattis volutpat rhoncus,
@@ -530,8 +565,9 @@
     </div>
 </div>
     <!--форма отпарвки-->
-
+<!--создаем первый блок с функционирующей гугл картой-->
 <div class="box">
+    <!--размечаем блок для подальщей эксплуатации и инициализации карты-->
     <div class="map" id="map_canvas"></div>
     <div class="block-adres">
             <div class="container-adress">
@@ -542,17 +578,17 @@
                                <input type="text" placeholder="Full name" class="input-name">
                            </div>
                             <div class="col-md-6 col-xs-12">
-                                <select class="input-email">
-                                    <option><a class="disabled">E-mail adresses</a></option>
-                                    <option><a>company@mail.com</a></option>
-                                    <option><a>sale@mail.com</a></option>
-                                    <option><a>your@mail.com</a></option>
+                                    <select class="input-email">
+                                        <option class="opt"><span class="hov">E-mail adresses</span></option>
+                                        <option class="opt">company@mail.com</option>
+                                        <option class="opt">sale@mail.com</option>
+                                        <option class="opt">your@mail.com</option>
 
-                                </select>
+                                    </select>
                             </div>
                         </form>
                         <div class="col-md-12 col-xs-12">
-                                <textarea rows="8"class="text-area"></textarea>
+                                <textarea rows="8" class="text-area"></textarea>
                         </div>
                         <div class="container-fluid">
                             <div class="col-md-12 col-xs-12 from-chek ">
@@ -581,7 +617,7 @@
                         <p>your@gmail.com</p>
                     </div>
                     <script>
-                        if(window.innerWidth < 800) {
+                        if(window.innerWidth < 80) {
                             var body = (document.getElementByTagName("body"))[0];
                             body.className = "mobile";
                         }
@@ -590,7 +626,10 @@
             </div>
     </div>
 </div>
+
+    <!--подключаем гугл карты, указываем ключ для Google Maps JS Api-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGV2xb-shxAI3pdkJcpBdrroH2Nffd74s"></script>
+    <!--пишем скрипт инициализации гугл карты с задаными координатами-->
 <script type="text/javascript">
     function initialize() {
         var myLatlng = new google.maps.LatLng(47.9056685, 33.4013124);

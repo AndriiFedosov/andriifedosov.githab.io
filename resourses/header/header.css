@@ -45,7 +45,9 @@
     background-color: #0f0f0f;
     color: white;
     opacity: 0.83;
-    float: none;
+
+
+
 
 }
 .products{
@@ -274,7 +276,28 @@
     font-style: normal;
     font-family: "Lato Light", monospace;
     font-size: 8pt;
+
 }
+
+select{
+    color: white;
+    background: none;
+}
+
+.opt{
+    background-color: white;
+    color: black;
+}
+.opt:active{
+    background: white;!important;
+    color: #3fb5db;!important;
+}
+.hov:hover{
+    background-color: white;!important;
+    color: #3fb5db;!important;
+}
+
+
 .input-email>option>a:hover{
     background: none;
     color: #3fb5db;
@@ -324,7 +347,7 @@
     background: #eaea00;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
     border-radius: 0;
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:998px) {
     .no-mobile {
         display: none;
     }}
@@ -346,24 +369,38 @@
     color: #3fb5db;
 }
 .image{
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left:15% ;
     width: 70%;
     height: 70%;
+
+
 }
+.image2{
+    margin-top: 0;
+    margin-left:11% ;
+    width: 75%;
+    height: 100%;
+}
+
 .get-about2{
     color: #9d9d9d;
+    font-size: 0.3em;
+    line-height: 2;
 }
 .get-about3{
     margin-top: 10%;
     font-family: Lato, serif;
     color: black;
+    font-size: 0.3em;
+    line-height: 2;
 }
 .right-text{
     text-align: right;!important;
 }
 .myProgress{
 position: relative;
+   margin-top: 2%;
     width: 100%;
     height: 12px;
     background: none;
@@ -374,12 +411,13 @@ position: relative;
 
 }
 #myBar,#myBar1,#myBar2,#myBar3{
+
     position: absolute;
     width: 1%;
     margin: 2px;
     height: 60%;
     background-color: #31b0d5;
-    ;
+
 
 }
 
